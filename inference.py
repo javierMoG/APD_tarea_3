@@ -1,3 +1,16 @@
+"""
+This script loads a trained linear regression model and makes predictions on new data.
+
+Dependencies:
+- pandas: For reading CSV files and data manipulation.
+- joblib: For loading the trained model from a file.
+- sklearn.linear_model.LinearRegression: For making predictions using a linear regression model.
+- os: For setting the working directory.
+
+Returns:
+None
+"""
+
 import pandas as pd
 import joblib
 from sklearn.linear_model import LinearRegression

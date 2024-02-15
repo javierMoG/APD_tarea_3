@@ -1,3 +1,17 @@
+"""
+This script trains a linear regression model on preprocessed data and saves the trained model.
+
+Dependencies:
+- pandas: For reading CSV files and data manipulation.
+- os: For setting the working directory.
+- sklearn.model_selection.train_test_split: For splitting the data into training and test sets.
+- sklearn.linear_model.LinearRegression: For training a linear regression model.
+- joblib: For saving the trained model to a file.
+
+Returns:
+None
+"""
+
 import pandas as pd
 import os
 from sklearn.model_selection import train_test_split

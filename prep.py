@@ -1,3 +1,21 @@
+"""
+This script preprocesses data from two CSV files, one containing training data and the other containing test data. It performs the following steps:
+
+1. Reads the raw data from the CSV files and joins them to preprocess.
+2. Drops columns with a high percentage of missing values.
+3. Imputes missing values in the remaining columns, using the mean for numeric variables and the mode for categorical variables.
+4. Converts categorical variables into one-hot encoded format.
+5. Prepares the preprocessed data for training and inference by splitting it back into training and test sets.
+6. Saves the preprocessed data to CSV files.
+
+Dependencies:
+- pandas: For reading CSV files and data manipulation.
+- os: For setting the working directory.
+
+Returns:
+None
+"""
+
 import pandas as pd
 import os
 
@@ -17,6 +35,19 @@ df = pd.concat([tbl_train, tbl_test])
 df.drop(columns=['Alley', 'MasVnrType', 'FireplaceQu', 'PoolQC', 'Fence', 'MiscFeature'],inplace=True)
 # Imputamos los valores faltantes de las demás columnas
 def fill_na(df):
+    """
+    Fills missing values in a DataFrame.
+
+    Iterates over each column in the DataFrame and fills missing values using appropriate strategies:
+    - For numeric columns, missing values are filled with the mean of the column.
+    - For categorical columns, missing values are filled with the mode of the column.
+
+    Parameters:
+    - df (DataFrame): The input DataFrame containing missing values to be filled.
+
+    Returns:
+    DataFrame: DataFrame with missing values filled.
+    """
     for column in df.columns:
         if df[column].isnull().any():
             if pd.api.types.is_numeric_dtype(df[column]):
@@ -31,6 +62,17 @@ df = fill_na(df)
 
 # Convertimos las variables categoricas a one hot encoding
 def onehot(df):
+    """
+    Converts categorical variables in a DataFrame into one-hot encoded format.
+
+    Iterates over each column in the DataFrame and converts non-numeric columns into one-hot encoded format.
+    
+    Parameters:
+    - df (DataFrame): The input DataFrame containing categorical variables to be one-hot encoded.
+
+    Returns:
+    DataFrame: DataFrame with categorical variables converted into one-hot encoded format.
+    """
     df_aux=df
     i=0 
     for column in df.columns:
