@@ -1,1 +1,16 @@
 # APD_tarea_3
+
+* [data/](./APD_tarea_3/data)
+  * [inference.csv](./APD_tarea_3/data/inference.csv)
+  * [predictions.csv](./APD_tarea_3/data/predictions.csv)
+  * [prep.csv](./APD_tarea_3/data/prep.csv)
+  * [test.csv](./APD_tarea_3/data/test.csv)
+  * [train.csv](./APD_tarea_3/data/train.csv)
+* [notebooks/](./APD_tarea_3/notebooks)
+  * [Tarea1.ipynb](./APD_tarea_3/notebooks/Tarea1.ipynb)
+* [src/](./APD_tarea_3/src)
+* [inference.py](./APD_tarea_3/inference.py)
+* [model.sav](./APD_tarea_3/model.sav)
+* [prep.py](./APD_tarea_3/prep.py)
+* [README.md](./APD_tarea_3/README.md)
+* [train.py](./APD_tarea_3/train.py)
