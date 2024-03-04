@@ -19,14 +19,23 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import joblib
+import yaml
+import random
+
+# Abrir yaml
+with open("config.yml", "r") as file:
+    config = yaml.safe_load(file)
 
 # Leémos los datos procesados
-df = pd.read_csv("./data/prep.csv")
+df = pd.read_csv(config['data']['clean']['train'])
 
 # Eliminamos la columna de Id para entrenar el modelo
 df.drop(columns="Id", inplace=True)
 X = df.loc[:, df.columns != 'SalePrice'].to_numpy()
 Y = df["SalePrice"].to_numpy()
+
+# Fijamos la semilla
+random.seed(config['modeling']['random_seed'])
 
 # Separamos lo datos en conjunto de entrenamiento y de prueba (80% y 20%
 # respectivamente)

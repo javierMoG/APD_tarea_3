@@ -20,10 +20,15 @@ None
 """
 
 import pandas as pd
+import yaml
+
+# Abrir yaml
+with open("config.yml", "r") as file:
+    config = yaml.safe_load(file)
 
 # Leémos los datos sin procesar
-tbl_train = pd.read_csv("./data/train.csv")
-tbl_test = pd.read_csv("./data/test.csv")
+tbl_train = pd.read_csv(config['data']['raw']['train'])
+tbl_test = pd.read_csv(config['data']['raw']['test'])
 
 # Guardamos la variable objetivo
 y = tbl_train["SalePrice"]
@@ -111,5 +116,5 @@ tbl_test_clean = df[1461:2920].copy()
 tbl_train_clean["SalePrice"] = y
 
 # Guardamos los datos preprocesados
-tbl_train_clean.to_csv("./data/prep.csv", index=False)
-tbl_test_clean.to_csv("./data/inference.csv", index=False)
+tbl_train_clean.to_csv(config['data']['clean']['train'], index=False)
+tbl_test_clean.to_csv(config['data']['clean']['test'], index=False)

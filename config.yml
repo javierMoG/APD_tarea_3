@@ -1,0 +1,12 @@
+data:
+  raw:
+    train: "./data/train.csv"
+    test: "./data/test.csv"
+  clean:
+    train: "./data/prep.csv"
+    test: "./data/inference.csv"
+  predictions: "./data/predictions.csv"
+
+modeling:
+  # Fix this for reproducibility, change to have new splits
+  random_seed: 102

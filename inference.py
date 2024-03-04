@@ -15,9 +15,14 @@ None
 
 import pandas as pd
 import joblib
+import yaml
+
+# Abrir yaml
+with open("config.yml", "r") as file:
+    config = yaml.safe_load(file)
 
 # Leémos los datos de las casas a predecir
-df = pd.read_csv("./data/inference.csv")
+df = pd.read_csv(config['data']['clean']['test'])
 X_pred = df.copy()
 X_pred.drop(columns="Id", inplace=True)
 X_pred = X_pred.to_numpy()
@@ -30,4 +35,4 @@ precios_pred = model.predict(X_pred)
 
 # Guardamos los resultados
 df["SalePrice"] = precios_pred
-df.to_csv("./data/predictions.csv", index=False)
+df.to_csv(config['data']['predictions'], index=False)
