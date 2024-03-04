@@ -13,13 +13,9 @@ None
 """
 
 import pandas as pd
-import os
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import joblib
-
-# Dirección local del repo
-os.chdir('c:\\Users\\javie\\OneDrive - INSTITUTO TECNOLOGICO AUTONOMO DE MEXICO\\MaestriaEnCienciaDeDatos\\4toSemestre\\ArquitecturaDeProductosDeDatos\\Tareas\\Tarea3\\APD_tarea_3')
 
 # Leémos los datos procesados
 df = pd.read_csv("./data/prep.csv")
@@ -43,5 +39,5 @@ linreg.fit(x_train, y_train)
 print(f"R^2 en el conjunto de entrenamiento: {linreg.score(x_train, y_train):.3f}")
 print(f"R^2 en el conjunto de prueba: {linreg.score(x_test, y_test):.3f}")
 
-# Guardamos el modelo 
+# Guardamos el modelo
 joblib.dump(linreg, 'model.sav')

@@ -13,11 +13,6 @@ None
 
 import pandas as pd
 import joblib
-from sklearn.linear_model import LinearRegression
-import os
-
-# Dirección local del repo
-os.chdir('c:\\Users\\javie\\OneDrive - INSTITUTO TECNOLOGICO AUTONOMO DE MEXICO\\MaestriaEnCienciaDeDatos\\4toSemestre\\ArquitecturaDeProductosDeDatos\\Tareas\\Tarea3\\APD_tarea_3')
 
 # Leémos los datos de las casas a predecir
 df = pd.read_csv("./data/inference.csv")
