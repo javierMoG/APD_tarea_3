@@ -1,10 +1,12 @@
 """
-This script loads a trained linear regression model and makes predictions on new data.
+This script loads a trained linear regression model and makes predictions
+on new data.
 
 Dependencies:
 - pandas: For reading CSV files and data manipulation.
 - joblib: For loading the trained model from a file.
-- sklearn.linear_model.LinearRegression: For making predictions using a linear regression model.
+- sklearn.linear_model.LinearRegression: For making predictions using a
+linear regression model.
 - os: For setting the working directory.
 
 Returns:
@@ -28,4 +30,4 @@ precios_pred = model.predict(X_pred)
 
 # Guardamos los resultados
 df["SalePrice"] = precios_pred
-df.to_csv("./data/predictions.csv", index = False)
+df.to_csv("./data/predictions.csv", index=False)
