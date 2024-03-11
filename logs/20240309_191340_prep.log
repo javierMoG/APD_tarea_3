@@ -1,0 +1,10 @@
+root - INFO - Cargando datos crudos para su preprocesamiento
+root - DEBUG - Número de datos de entrenamiento: 1460
+root - DEBUG - Número de datos de prueba: 1459
+root - DEBUG - Número de variables explicativas: 81
+root - INFO - Preprocesamiento de los datos
+root - DEBUG - Número de variables que se utilizarán en el modelo: 74
+root - DEBUG - Número de columnas después de aplicar one-hot encoding a las variables categóricas 247
+root - INFO - Guardamos los nuevos datos preprocesados
+root - DEBUG - Número de datos de entrenamiento: 1460
+root - DEBUG - Número de datos de prueba: 1459

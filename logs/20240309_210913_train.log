@@ -1,0 +1,4 @@
+root - INFO - Leémos los datos limpios de las casas cuyo precio se quiere predecir
+root - INFO - El archivo ./data/inference.csv no está vacío
+root - INFO - Guardamos las predicciones
+root - DEBUG - Archivo ./data/predictions.csv guardado con éxito

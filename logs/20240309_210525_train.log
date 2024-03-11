@@ -1,0 +1,10 @@
+root - INFO - Cargamos los datos de entrenamiento limpios para entrenar el modelo
+root - INFO - El archivo ./data/prep.csv no está vacío
+root - INFO - Semilla del modelo: 102
+root - INFO - Separamos los datos en conjunto de entrenamiento y prueba
+root - DEBUG - 1168 registros en el conjunto de entrenamiento
+root - DEBUG - 292 registros en el conjunto de prueba
+root - INFO - Entrenamos el modelo y lo evaluamos
+root - DEBUG - R^2 en el conjunto de entrenamiento:0.945
+root - DEBUG - R^2 en el conjunto de prueba:0.509
+root - INFO - Guardamos el modelo

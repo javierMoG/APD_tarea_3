@@ -1,0 +1,5 @@
+root - INFO - El archivo ./data/prep.csv no está vacío
+root - DEBUG - 1168 registros en el conjunto de entrenamiento
+root - DEBUG - 292 registros en el conjunto de prueba
+root - DEBUG - R^2 en el conjunto de entrenamiento:0.939
+root - DEBUG - R^2 en el conjunto de prueba:0.790
