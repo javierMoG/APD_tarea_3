@@ -47,3 +47,7 @@ test_utils.py ...                                                               
 ================================================== 3 passed in 1.30s ==================================================)
 * [train.py](.\APD_tarea_3\train.py)
 * [utils.py](.\APD_tarea_3\utils.py)
+
+## Arquitectura
+
+![Arquitectura](tarea5.png)
