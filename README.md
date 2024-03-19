@@ -50,4 +50,4 @@ test_utils.py ...                                                               
 
 ## Arquitectura
 
-![Arquitectura](tarea5.png)
+![Arquitectura](Tarea5.png)
